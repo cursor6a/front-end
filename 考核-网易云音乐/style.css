@@ -1,0 +1,334 @@
+:root {
+    --primary-color: #ec4141;
+    --text-color: #333;
+    --secondary-text: #777;
+    --border-color: #e6e6e6;
+    --sidebar-width: 200px;
+    --header-height: 60px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--text-color);
+    background: #fff;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* 侧边栏样式 */
+.sidebar {
+    width: var(--sidebar-width);
+    background: #f9f9f9;
+    border-right: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.logo {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 30px;
+    height: auto;
+}
+
+.logo-text {
+    font-family: 'SimHei';
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+
+.main-nav ul,
+.my-music ul {
+    list-style: none;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 24px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-item i {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+.nav-item.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+.my-music {
+    margin-top: 20px;
+    padding: 0 12px;
+}
+
+.my-music h3 {
+    font-size: 12px;
+    color: var(--secondary-text);
+    padding: 8px 12px;
+}
+
+.my-music a {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.my-music i {
+    margin-right: 8px;
+    font-size: 16px;
+}
+
+/* 主内容区样式 */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* 头部样式 */
+.header {
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-controls {
+    display: flex;
+    gap: 8px;
+}
+
+.nav-controls i {
+    font-size: 20px;
+    color: var(--secondary-text);
+    cursor: pointer;
+}
+
+.search-bar {
+    position: relative;
+    width: 400px;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    width: calc(100% - 70px);
+    padding: 8px 35px;
+    border: none;
+    border-radius: 20px 0 0 20px;
+    background: #f5f5f5;
+    outline: none;
+    font-size: 14px;
+}
+
+.search-btn {
+    width: 70px;
+    height: 32px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.search-btn:hover {
+    background: #d63b3b;
+}
+
+.search-bar i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--secondary-text);
+}
+
+.search-bar .icon-search {
+    left: 10px;
+}
+
+.search-bar .icon-voice {
+    right: 10px;
+    cursor: pointer;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.username {
+    font-size: 14px;
+}
+
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-controls i {
+    font-size: 18px;
+    color: var(--secondary-text);
+    cursor: pointer;
+}
+
+/* 分类导航样式 */
+.category-nav {
+    padding: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.category-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.category-nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 14px;
+    padding: 5px 0;
+}
+
+.category-nav a.active {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+/* 歌单展示区样式 */
+.playlist-container {
+    flex: 1;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    overflow-y: auto;
+}
+
+.playlist-card {
+    position: relative;
+    cursor: pointer;
+}
+
+.playlist-card img {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.playlist-card .title {
+    margin-top: 8px;
+    font-size: 14px;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.playlist-card .play-count {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: white;
+    font-size: 12px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 2px 6px;
+    border-radius: 10px;
+}
+
+/* 更多分类弹出窗口样式 */
+.more-categories-popup {
+    position: absolute;
+    top: 115px;  /* 竖直方向位置 */
+    left: 700px;
+    transform: translateX(-50%);  /* 水平居中 */
+    width: 150px;
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    z-index: 100;
+    display: none;
+}
+
+.more-categories-popup ul {
+    list-style: none;
+}
+
+.more-categories-popup li {
+    padding: 8px 16px;
+}
+
+.more-categories-popup a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+}
+
+.more-categories-popup a:hover {
+    color: var(--primary-color);
+}
+
+.more-categories-popup.show {
+    display: block;
+}
+
+/* 调整更多分类按钮的容器样式 */
+.category-nav .more {
+    position: relative;
+    cursor: pointer;
+}
+
+.category-nav .more i {
+    transition: transform 0.2s ease;
+}
+
+.category-nav .more.active i {
+    transform: rotate(180deg);
+} 

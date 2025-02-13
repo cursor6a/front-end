@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网易云音乐</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://s1.music.126.net/style/favicon.ico"/>
+</head>
+<body>
+<div class="container">
+    <!-- 左侧边栏 -->
+    <aside class="sidebar">
+        <div class="logo">
+            <img src="assets/logo.svg" alt="网易云音乐">
+            <span class="logo-text">网易云音乐</span>
+        </div>
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#" class="nav-item"><i class="iconfont icon-home"></i>推荐</a></li>
+                <li><a href="#" class="nav-item active"><i class="iconfont icon-music"></i>精选</a></li>
+                <li><a href="#" class="nav-item"><i class="iconfont icon-broadcast"></i>播客</a></li>
+                <li><a href="#" class="nav-item"><i class="iconfont icon-follow"></i>关注</a></li>
+            </ul>
+        </nav>
+
+        <div class="my-music">
+            <h3>我的</h3>
+            <ul>
+                <li><a href="#"><i class="iconfont icon-like"></i>我喜欢的音乐</a></li>
+                <li><a href="#"><i class="iconfont icon-history"></i>最近播放</a></li>
+                <li><a href="#"><i class="iconfont icon-podcast"></i>我的播客</a></li>
+                <li><a href="#"><i class="iconfont icon-collection"></i>我的收藏</a></li>
+                <li><a href="#"><i class="iconfont icon-download"></i>下载管理</a></li>
+                <li><a href="#"><i class="iconfont icon-local"></i>本地音乐</a></li>
+                <li><a href="#"><i class="iconfont icon-cloud"></i>我的音乐网盘</a></li>
+            </ul>
+        </div>
+    </aside>
+
+    <!-- 主内容区 -->
+    <main class="main-content">
+        <!-- 顶部搜索栏 -->
+        <header class="header">
+            <div class="header-left">
+                <div class="nav-controls">
+                    <i class="iconfont icon-left"></i>
+                    <i class="iconfont icon-right"></i>
+                </div>
+                <div class="search-bar">
+                    <i class="iconfont icon-search"></i>
+                    <input type="text" placeholder="搜索音乐、歌手、歌词、用户">
+                    <i class="iconfont icon-voice"></i>
+                    <button class="search-btn">搜索</button>
+                </div>
+            </div>
+            <div class="user-info">
+                <img src="assets/avatar.jpg" alt="用户头像" class="avatar">
+                <span class="username">用户o2402l</span>
+                <div class="header-controls">
+                    <i class="iconfont icon-mail"></i>
+                    <i class="iconfont icon-theme"></i>
+                    <i class="iconfont icon-setting"></i>
+                    <i class="iconfont icon-minimize"></i>
+                    <i class="iconfont icon-maximize"></i>
+                    <i class="iconfont icon-close"></i>
+                </div>
+            </div>
+        </header>
+
+        <!-- 分类导航 -->
+        <nav class="category-nav">
+            <ul>
+                <li><a href="#" class="active">推荐</a></li>
+                <li><a href="#">官方</a></li>
+                <li><a href="#">华语</a></li>
+                <li><a href="#">摇滚</a></li>
+                <li><a href="#">民谣</a></li>
+                <li><a href="#">电子</a></li>
+                <li><a href="#">轻音乐</a></li>
+                <li><a href="#" class="more">更多分类</a></li>
+            </ul>
+        </nav>
+
+        <!-- 更多分类 -->
+        <div class="more-categories-popup">
+            <ul>
+                <li><a href="#">流行</a></li>
+                <li><a href="#">古典</a></li>
+                <li><a href="#">舞曲</a></li>
+                <li><a href="#">民族</a></li>
+                <li><a href="#">说唱</a></li>
+                <li><a href="#">英伦</a></li>
+                <li><a href="#">爵士</a></li>
+                <li><a href="#">金属</a></li>
+                <li><a href="#">乡村</a></li>
+                <li><a href="#">朋克</a></li>
+            </ul>
+        </div>
+
+        <!-- 歌单展示区 -->
+        <div class="playlist-container" id="playlistContainer">
+            <!-- 歌单将通过 JS 动态加载 -->
+        </div>
+    </main>
+</div>
+<script src="main.js"></script>
+</body>
+</html> 
